@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUNORA FASHION | Modern Luxury E-Commerce</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            bg: '#FDFBF7',
+                            card: '#F7F4EE',
+                            dark: '#111111',
+                            accent: '#2C2B29',
+                            muted: '#767571'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-brand-bg text-brand-dark font-sans antialiased selection:bg-brand-dark selection:text-white">
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-50 bg-brand-bg/90 backdrop-blur-md border-b border-black/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="font-serif text-2xl font-bold tracking-widest text-brand-dark uppercase">
+                LUNORA <span class="text-xs tracking-normal block font-sans font-light -mt-1 text-brand-muted">FASHION</span>
+            </a>
+            
+            <nav class="hidden md:flex space-x-8 text-sm uppercase tracking-wider font-medium">
+                <a href="#categories" class="hover:text-brand-muted transition">Categories</a>
+                <a href="#collections" class="hover:text-brand-muted transition">Collections</a>
+                <a href="#bestsellers" class="hover:text-brand-muted transition">Best Sellers</a>
+                <a href="#sale" class="text-red-700 hover:text-red-900 transition">Sale</a>
+            </nav>
+
+            <div class="flex items-center space-x-6 text-lg">
+                <button aria-label="Search" class="hover:opacity-70 transition"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button aria-label="Account" class="hover:opacity-70 transition"><i class="fa-regular fa-user"></i></button>
+                <button aria-label="Wishlist" class="hover:opacity-70 transition relative">
+                    <i class="fa-regular fa-heart"></i>
+                    <span class="absolute -top-1 -right-2 bg-brand-dark text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center">2</span>
+                </button>
+                <button aria-label="Cart" class="hover:opacity-70 transition relative">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="absolute -top-1 -right-2 bg-brand-dark text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center">1</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-brand-card rounded-2xl p-6 sm:p-10 lg:p-12">
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="text-xs font-semibold tracking-widest uppercase text-brand-muted">NEW COLLECTION</span>
+                    <h1 class="font-serif text-4xl sm:text-6xl font-normal leading-tight">Elevate Your Everyday Style</h1>
+                    <p class="text-brand-muted text-base sm:text-lg max-w-md font-light leading-relaxed">
+                        Discover timeless pieces crafted for comfort, designed for elegance, made for you.
+                    </p>
+                    
+                    <div class="flex flex-wrap items-center gap-4 pt-2">
+                        <a href="#bestsellers" class="bg-brand-dark text-white px-8 py-4 rounded-xl text-sm font-medium hover:bg-black/80 transition flex items-center gap-2">
+                            Shop Now <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                        <button class="px-6 py-4 rounded-xl text-sm font-medium hover:bg-black/5 transition flex items-center gap-3">
+                            <span class="w-8 h-8 rounded-full border border-brand-dark flex items-center justify-center text-xs"><i class="fa-solid fa-play"></i></span>
+                            Watch Lookbook
+                        </button>
+                    </div>
+
+                    <!-- Hero Value Props Bar -->
+                    <div class="grid grid-cols-3 gap-2 pt-8 border-t border-black/10">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-truck-fast text-brand-muted"></i>
+                            <div>
+                                <h4 class="text-xs font-semibold">Free Shipping</h4>
+                                <p class="text-[10px] text-brand-muted">On orders over $99</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-arrow-rotate-left text-brand-muted"></i>
+                            <div>
+                                <h4 class="text-xs font-semibold">Easy Returns</h4>
+                                <p class="text-[10px] text-brand-muted">30-day returns</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-shield-halved text-brand-muted"></i>
+                            <div>
+                                <h4 class="text-xs font-semibold">Secure Payment</h4>
+                                <p class="text-[10px] text-brand-muted">100% protected</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6 relative h-[450px] sm:h-[550px] rounded-xl overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=1000" 
+                         alt="Model in tailored blazer" 
+                         class="w-full h-full object-cover object-top hover:scale-105 transition duration-700">
+                </div>
+            </div>
+        </section>
+
+        <!-- Circular Category Quick-Links -->
+        <section id="categories" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="flex items-center justify-between space-x-6 overflow-x-auto no-scrollbar py-4">
+                <!-- Category Circle -->
+                <a href="#" class="flex flex-col items-center group shrink-0">
+                    <div class="w-20 h-20 rounded-full overflow-hidden p-1 border border-transparent group-hover:border-brand-dark transition">
+                        <img src="https://images.unsplash.com/photo-1581044777550-4cfa60707c03?auto=format&fit=crop&q=80&w=200" class="w-full h-full object-cover rounded-full group-hover:scale-110 transition duration-300" alt="Women">
+                    </div>
+                    <span class="text-xs font-medium mt-2">Women</span>
+                </a>
+                <a href="#" class="flex flex-col items-center group shrink-0">
+                    <div class="w-20 h-20 rounded-full overflow-hidden p-1 border border-transparent group-hover:border-brand-dark transition">
+                        <img src="https://images.unsplash.com/photo-1617137984095-74e4e5e3613f?auto=format&fit=crop&q=80&w=200" class="w-full h-full object-cover rounded-full group-hover:scale-110 transition duration-300" alt="Men">
+                    </div>
+                    <span class="text-xs font-medium mt-2">Men</span>
+                </a>
+                <a href="#" class="flex flex-col items-center group shrink-0">
+                    <div class="w-20 h-20 rounded-full overflow-hidden p-1 border border-transparent group-hover:border-brand-dark transition">
+                        <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&q=80&w=200" class="w-full h-full object-cover rounded-full group-hover:scale-110 transition duration-300" alt="Dresses">
+                    </div>
+                    <span class="text-xs font-medium mt-2">Dresses</span>
+                </a>
+                <a href="#" class="flex flex-col items-center group shrink-0">
+                    <div class="w-20 h-20 rounded-full overflow-hidden p-1 border border-transparent group-hover:border-brand-dark transition">
+                        <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&q=80&w=200" class="w-full h-full object-cover rounded-full group-hover:scale-110 transition duration-300" alt="Tops">
+                    </div>
+                    <span class="text-xs font-medium mt-2">Tops</span>
+                </a>
+                <a href="#" class="flex flex-col items-center group shrink-0">
+                    <div class="w-20 h-20 rounded-full overflow-hidden p-1 border border-transparent group-hover:border-brand-dark transition">
+                        <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&q=80&w=200" class="w-full h-full object-cover rounded-full group-hover:scale-110 transition duration-300" alt="Shoes">
+                    </div>
+                    <span class="text-xs font-medium mt-2">Shoes</span>
+                </a>
+                <a href="#" class="flex flex-col items-center group shrink-0">
+                    <div class="w-20 h-20 rounded-full overflow-hidden p-1 border border-transparent group-hover:border-brand-dark transition">
+                        <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&q=80&w=200" class="w-full h-full object-cover rounded-full group-hover:scale-110 transition duration-300" alt="Bags">
+                    </div>
+                    <span class="text-xs font-medium mt-2">Bags</span>
+                </a>
+                <a href="#" class="flex flex-col items-center group shrink-0">
+                    <div class="w-20 h-20 rounded-full overflow-hidden p-1 border border-transparent group-hover:border-brand-dark transition">
+                        <img src="https://images.unsplash.com/photo-1511556532299-8f662fc26c06?auto=format&fit=crop&q=80&w=200" class="w-full h-full object-cover rounded-full group-hover:scale-110 transition duration-300" alt="Accessories">
+                    </div>
+                    <span class="text-xs font-medium mt-2">Accessories</span>
+                </a>
+                <!-- Highlighted Sale Circle -->
+                <a href="#sale" class="flex flex-col items-center group shrink-0">
+                    <div class="w-20 h-20 rounded-full bg-brand-dark text-white flex items-center justify-center font-bold text-sm group-hover:bg-red-700 transition">
+                        SALE
+                    </div>
+                    <span class="text-xs font-medium mt-2 text-red-700">Offers</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Featured Collections Grid -->
+        <section id="collections" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="flex items-end justify-between mb-8">
+                <div>
+                    <span class="text-xs font-semibold tracking-widest uppercase text-brand-muted">SHOP BY CATEGORY</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl">Find Your Perfect Style</h2>
+                </div>
+                <a href="#" class="text-sm font-medium hover:underline flex items-center gap-1">View All Categories <i class="fa-solid fa-arrow-right text-xs"></i></a>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card 1 -->
+                <div class="group relative h-[380px] rounded-2xl overflow-hidden cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Women's Collection">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-6 left-6 right-6 text-white">
+                        <h3 class="font-serif text-2xl font-normal">Women's Collection</h3>
+                        <p class="text-xs text-white/80 mt-1 flex items-center gap-2">Explore Now <i class="fa-solid fa-arrow-right text-[10px]"></i></p>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="group relative h-[380px] rounded-2xl overflow-hidden cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1490578474895-699bc4e2cf59?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Men's Collection">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-6 left-6 right-6 text-white">
+                        <h3 class="font-serif text-2xl font-normal">Men's Collection</h3>
+                        <p class="text-xs text-white/80 mt-1 flex items-center gap-2">Explore Now <i class="fa-solid fa-arrow-right text-[10px]"></i></p>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="group relative h-[380px] rounded-2xl overflow-hidden cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Dresses">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-6 left-6 right-6 text-white">
+                        <h3 class="font-serif text-2xl font-normal">Dresses</h3>
+                        <p class="text-xs text-white/80 mt-1 flex items-center gap-2">Explore Now <i class="fa-solid fa-arrow-right text-[10px]"></i></p>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="group relative h-[380px] rounded-2xl overflow-hidden cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1509319117193-57bab727e09d?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Accessories">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-6 left-6 right-6 text-white">
+                        <h3 class="font-serif text-2xl font-normal">Accessories</h3>
+                        <p class="text-xs text-white/80 mt-1 flex items-center gap-2">Explore Now <i class="fa-solid fa-arrow-right text-[10px]"></i></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dual Promotional Banners -->
+        <section id="sale" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Promo Banner 1 -->
+                <div class="bg-brand-card rounded-2xl p-8 flex items-center justify-between overflow-hidden relative min-h-[220px]">
+                    <div class="z-10 max-w-[60%] space-y-3">
+                        <span class="text-[10px] font-bold tracking-widest uppercase text-brand-muted">LIMITED TIME OFFER</span>
+                        <h3 class="font-serif text-2xl sm:text-3xl">Spring Sale Up to 50% Off</h3>
+                        <a href="#" class="inline-block bg-brand-dark text-white px-5 py-2.5 rounded-xl text-xs font-medium hover:bg-black/80 transition">Shop The Sale →</a>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&q=80&w=400" class="absolute -right-4 -bottom-10 w-48 sm:w-56 h-auto object-cover rounded-xl" alt="Spring Sale">
+                </div>
+                <!-- Promo Banner 2 -->
+                <div class="bg border border-black/5 rounded-2xl p-8 flex items-center justify-between overflow-hidden relative min-h-[220px]">
+                    <div class="z-10 max-w-[60%] space-y-3">
+                        <span class="text-[10px] font-bold tracking-widest uppercase text-brand-muted">NEW ARRIVALS</span>
+                        <h3 class="font-serif text-2xl sm:text-3xl">Fresh Styles Just Landed</h3>
+                        <a href="#" class="inline-block bg-brand-dark text-white px-5 py-2.5 rounded-xl text-xs font-medium hover:bg-black/80 transition">Explore New In →</a>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?auto=format&fit=crop&q=80&w=400" class="absolute -right-4 -bottom-10 w-48 sm:w-56 h-auto object-cover rounded-xl" alt="New Arrivals">
+                </div>
+            </div>
+        </section>
+
+        <!-- Best Sellers Grid -->
+        <section id="bestsellers" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="flex items-end justify-between mb-8">
+                <div>
+                    <span class="text-xs font-semibold tracking-widest uppercase text-brand-muted">BEST SELLERS</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl">Our Most Loved Picks</h2>
+                </div>
+                <a href="#" class="text-sm font-medium hover:underline flex items-center gap-1">View All Products <i class="fa-solid fa-arrow-right text-xs"></i></a>
+            </div>
+
+            <!-- 6-column responsive grid -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6">
+                <!-- Product Card 1 -->
+                <div class="group">
+                    <div class="relative rounded-xl overflow-hidden bg-brand-card aspect-[3/4] mb-3">
+                        <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&q=80&w=400" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" alt="Product">
+                        <button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/80 hover:bg-white flex items-center justify-center text-xs text-brand-dark shadow-sm transition">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+                    </div>
+                    <h4 class="text-xs font-medium text-brand-dark truncate">Linen Blend Blazer</h4>
+                    <p class="text-xs font-semibold text-brand-dark mt-1">$89.99</p>
+                    <div class="flex items-center gap-1 mt-1 text-[10px] text-amber-600">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        <span class="text-brand-muted ml-1">(124)</span>
+                    </div>
+                </div>
+
+                <!-- Product Card 2 -->
+                <div class="group">
+                    <div class="relative rounded-xl overflow-hidden bg-brand-card aspect-[3/4] mb-3">
+                        <img src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?auto=format&fit=crop&q=80&w=400" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" alt="Product">
+                        <button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/80 hover:bg-white flex items-center justify-center text-xs text-brand-dark shadow-sm transition">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+                    </div>
+                    <h4 class="text-xs font-medium text-brand-dark truncate">Ribbed Knit Top</h4>
+                    <p class="text-xs font-semibold text-brand-dark mt-1">$29.99</p>
+                    <div class="flex items-center gap-1 mt-1 text-[10px] text-amber-600">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        <span class="text-brand-muted ml-1">(96)</span>
+                    </div>
+                </div>
+
+                <!-- Product Card 3 -->
+                <div class="group">
+                    <div class="relative rounded-xl overflow-hidden bg-brand-card aspect-[3/4] mb-3">
+                        <img src="https://images.unsplash.com/photo-1509551388413-e18d0ac5d495?auto=format&fit=crop&q=80&w=400" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" alt="Product">
+                        <button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/80 hover:bg-white flex items-center justify-center text-xs text-brand-dark shadow-sm transition">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+                    </div>
+                    <h4 class="text-xs font-medium text-brand-dark truncate">Wide Leg Trousers</h4>
+                    <p class="text-xs font-semibold text-brand-dark mt-1">$59.99</p>
+                    <div class="flex items-center gap-1 mt-1 text-[10px] text-amber-600">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                        <span class="text-brand-muted ml-1">(76)</span>
+                    </div>
+                </div>
+
+                <!-- Product Card 4 -->
+                <div class="group">
+                    <div class="relative rounded-xl overflow-hidden bg-brand-card aspect-[3/4] mb-3">
+                        <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&q=80&w=400" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" alt="Product">
+                        <button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/80 hover:bg-white flex items-center justify-center text-xs text-brand-dark shadow-sm transition">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+                    </div>
+                    <h4 class="text-xs font-medium text-brand-dark truncate">Leather Shoulder Bag</h4>
+                    <p class="text-xs font-semibold text-brand-dark mt-1">$79.99</p>
+                    <div class="flex items-center gap-1 mt-1 text-[10px] text-amber-600">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        <span class="text-brand-muted ml-1">(112)</span>
+                    </div>
+                </div>
+
+                <!-- Product Card 5 -->
+                <div class="group">
+                    <div class="relative rounded-xl overflow-hidden bg-brand-card aspect-[3/4] mb-3">
+                        <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&q=80&w=400" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" alt="Product">
+                        <button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/80 hover:bg-white flex items-center justify-center text-xs text-brand-dark shadow-sm transition">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+                    </div>
+                    <h4 class="text-xs font-medium text-brand-dark truncate">Minimal Strappy Heels</h4>
+                    <p class="text-xs font-semibold text-brand-dark mt-1">$49.99</p>
+                    <div class="flex items-center gap-1 mt-1 text-[10px] text-amber-600">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                        <span class="text-brand-muted ml-1">(84)</span>
+                    </div>
+                </div>
+
+                <!-- Product Card 6 -->
+                <div class="group">
+                    <div class="relative rounded-xl overflow-hidden bg-brand-card aspect-[3/4] mb-3">
+                        <img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&q=80&w=400" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" alt="Product">
+                        <button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/80 hover:bg-white flex items-center justify-center text-xs text-brand-dark shadow-sm transition">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+                    </div>
+                    <h4 class="text-xs font-medium text-brand-dark truncate">Oversized Sunglasses</h4>
+                    <p class="text-xs font-semibold text-brand-dark mt-1">$19.99</p>
+                    <div class="flex items-center gap-1 mt-1 text-[10px] text-amber-600">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        <span class="text-brand-muted ml-1">(53)</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trust & Feature Banner -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="bg-brand-card rounded-2xl p-6 sm:p-8 grid grid-cols-2 lg:grid-cols-4 gap-6 text-center lg:text-left">
+                <div class="flex flex-col lg:flex-row items-center gap-4">
+                    <div class="w-12 h-12 rounded-full border border-black/10 flex items-center justify-center text-brand-dark text-lg">
+                        <i class="fa-solid fa-box"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold">Free Shipping</h4>
+                        <p class="text-xs text-brand-muted">On orders over $99</p>
+                    </div>
+                </div>
+                <div class="flex flex-col lg:flex-row items-center gap-4">
+                    <div class="w-12 h-12 rounded-full border border-black/10 flex items-center justify-center text-brand-dark text-lg">
+                        <i class="fa-solid fa-rotate-left"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold">Easy Returns</h4>
+                        <p class="text-xs text-brand-muted">30-day returns policy</p>
+                    </div>
+                </div>
+                <div class="flex flex-col lg:flex-row items-center gap-4">
+                    <div class="w-12 h-12 rounded-full border border-black/10 flex items-center justify-center text-brand-dark text-lg">
+                        <i class="fa-solid fa-lock"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold">Secure Payment</h4>
+                        <p class="text-xs text-brand-muted">100% protected checkout</p>
+                    </div>
+                </div>
+                <div class="flex flex-col lg:flex-row items-center gap-4">
+                    <div class="w-12 h-12 rounded-full border border-black/10 flex items-center justify-center text-brand-dark text-lg">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold">24/7 Support</h4>
+                        <p class="text-xs text-brand-muted">We're here to help anytime</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Signup Banner -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="bg-brand-card rounded-2xl overflow-hidden grid grid-cols-1 md:grid-cols-12 items-center">
+                <div class="md:col-span-5 h-64 md:h-full min-h-[280px]">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover" alt="Model Coffee">
+                </div>
+                <div class="md:col-span-7 p-8 sm:p-12 space-y-4">
+                    <span class="text-xs font-semibold tracking-widest uppercase text-brand-muted">GET 10% OFF YOUR FIRST ORDER</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl">Join Our Style List</h2>
+                    <p class="text-xs text-brand-muted leading-relaxed">Sign up for exclusive offers, new arrivals, and style inspiration directly to your inbox.</p>
+                    
+                    <form class="flex flex-col sm:flex-row gap-3 pt-2" onsubmit="event.preventDefault();">
+                        <input type="email" placeholder="Enter your email" class="bg-white border border-black/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-dark grow">
+                        <button type="submit" class="bg-brand-dark text-white px-8 py-3 rounded-xl text-sm font-medium hover:bg-black/80 transition">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark text-white pt-16 pb-8 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-white/10">
+                
+                <!-- Brand Info -->
+                <div class="lg:col-span-2 space-y-4">
+                    <a href="#" class="font-serif text-2xl font-bold tracking-widest uppercase text-white block">
+                        LUNORA <span class="text-xs tracking-normal block font-sans font-light text-white/50">FASHION</span>
+                    </a>
+                    <p class="text-xs text-white/60 leading-relaxed max-w-sm">
+                        Timeless fashion for every moment. Designed with comfort and elegance in mind.
+                    </p>
+                    <div class="flex space-x-4 text-white/70 pt-2">
+                        <a href="#" class="hover:text-white transition"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="hover:text-white transition"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="hover:text-white transition"><i class="fa-brands fa-pinterest-p"></i></a>
+                        <a href="#" class="hover:text-white transition"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <!-- Column 1 -->
+                <div>
+                    <h4 class="text-xs font-semibold tracking-wider uppercase mb-4 text-white/90">Shop</h4>
+                    <ul class="space-y-2 text-xs text-white/60">
+                        <li><a href="#" class="hover:text-white transition">All Products</a></li>
+                        <li><a href="#" class="hover:text-white transition">New Arrivals</a></li>
+                        <li><a href="#" class="hover:text-white transition">Women</a></li>
+                        <li><a href="#" class="hover:text-white transition">Men</a></li>
+                        <li><a href="#" class="hover:text-white transition">Sale</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 2 -->
+                <div>
+                    <h4 class="text-xs font-semibold tracking-wider uppercase mb-4 text-white/90">Customer Care</h4>
+                    <ul class="space-y-2 text-xs text-white/60">
+                        <li><a href="#" class="hover:text-white transition">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-white transition">Shipping & Delivery</a></li>
+                        <li><a href="#" class="hover:text-white transition">Returns & Exchanges</a></li>
+                        <li><a href="#" class="hover:text-white transition">Size Guide</a></li>
+                        <li><a href="#" class="hover:text-white transition">FAQs</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3 -->
+                <div>
+                    <h4 class="text-xs font-semibold tracking-wider uppercase mb-4 text-white/90">About Us</h4>
+                    <ul class="space-y-2 text-xs text-white/60">
+                        <li><a href="#" class="hover:text-white transition">Our Story</a></li>
+                        <li><a href="#" class="hover:text-white transition">Sustainability</a></li>
+                        <li><a href="#" class="hover:text-white transition">Careers</a></li>
+                        <li><a href="#" class="hover:text-white transition">Press</a></li>
+                        <li><a href="#" class="hover:text-white transition">Store Locator</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Bar & Secondary Newsletter -->
+            <div class="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-white/40">
+                <p>&copy; 2026 LUNORA FASHION. All rights reserved.</p>
+                
+                <div class="flex items-center gap-2">
+                    <span class="text-[10px] text-white/60">STAY CONNECTED:</span>
+                    <form class="flex items-center bg-white/10 rounded-lg overflow-hidden border border-white/10" onsubmit="event.preventDefault();">
+                        <input type="email" placeholder="Your email..." class="bg-transparent px-3 py-1.5 text-xs text-white focus:outline-none placeholder:text-white/30">
+                        <button type="submit" class="px-3 py-1.5 text-white hover:bg-white/20 transition"><i class="fa-solid fa-arrow-right text-[10px]"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
